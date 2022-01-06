@@ -1,0 +1,134 @@
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+  max-width: 80%;
+  margin: auto;
+}
+
+body {
+  background-color: #f5f3f3;
+}
+
+body p {
+  color: black;
+}
+
+body a {
+  color: black;
+}
+
+header .nav-main {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+header .nav-main ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+header .nav-main ul img {
+  width: 40%;
+}
+
+header .nav-main ul #menu {
+  margin-top: 4%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+}
+
+header .nav-main ul #menu #menuItem {
+  margin-left: 40%;
+  margin-top: 1%;
+}
+
+header .nav-main ul #menu #menuItem li {
+  display: inline-block;
+  margin-left: 5%;
+}
+
+header .nav-main ul #menu #menuItem a {
+  font-size: 1.7vw;
+  display: inline;
+}
+
+header .nav-main ul #menu #search {
+  margin-top: 4.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 60%;
+}
+
+header .nav-main ul #menu #search input[type=text] {
+  width: 60%;
+  padding: 6px;
+  border: none;
+  font-size: 1vw;
+}
+
+header .nav-main ul #menu #search button[type=submit] {
+  width: 16%;
+}
+
+main h1 {
+  text-align: center;
+  font-size: 2vw;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+main .songList {
+  margin: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+main .songList .trHead th {
+  text-align: start;
+  font-size: 1.5vw;
+  padding-bottom: 1%;
+}
+
+main .songList .trData td {
+  font-size: 1.3vw;
+}
+
+main .songList .trData td .del, main .songList .trData td .edit {
+  cursor: pointer;
+}
+
+main .songList tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+main .editWrapper form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+main .editWrapper form .editContent {
+  height: 20vh;
+}
+
+main .editWrapper form .editBtn {
+  width: 20%;
+}
+/*# sourceMappingURL=main.css.map */

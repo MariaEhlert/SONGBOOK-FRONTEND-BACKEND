@@ -1,0 +1,113 @@
+*{
+    //global og universe selector
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+html{
+    max-width: 80%;
+    margin: auto;
+}
+body{
+    background-color:#f5f3f3;
+    p{
+        color: black;
+    }
+    a{
+        color: black;
+    }
+}
+header{
+    // NAV
+    .nav-main{
+        position: sticky;
+        top: 0;
+        // width: 100%;
+        ul{     
+            display: grid;
+            grid-template-columns: 30% 70%;
+            img{
+                width: 40%;
+            }
+            #menu {
+                margin-top: 4%;
+                display: grid;
+                grid-template-columns: 80% 20%;
+                #menuItem{
+                    margin-left: 40%;
+                    margin-top: 1%; 
+                    li{               
+                        display: inline-block; 
+                        margin-left: 5%;
+                    }
+                    a{
+                        font-size: 1.7vw;  
+                        display: inline;
+                    }
+                }
+                #search{
+                    margin-top: 4.5%;
+                    display: flex;
+                    justify-content: flex-end;
+                    height: 60%;
+                    input[type=text] {
+                        width: 60%;
+                        padding: 6px;
+                        border: none;
+                        font-size: 1vw;
+                    }
+                    button[type=submit]{
+                        width: 16%;
+                    }
+                }
+            }
+        }
+    }
+}
+main{
+    h1{
+        text-align: center;
+        font-size: 2vw;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .songList{
+        margin: auto;
+        width: 100%;
+        border-collapse: collapse;
+        .trHead{
+            th{
+                text-align: start;
+                font-size: 1.5vw;
+                padding-bottom: 1%;
+            }
+        }
+        .trData{
+            td{
+                font-size: 1.3vw;
+                .del, .edit{
+                    cursor: pointer
+                }
+                
+            }
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    }
+    .editWrapper{
+        form{
+            display: grid;
+            grid-template-columns: 1fr;
+            .editContent{
+                height: 20vh;
+            }
+            .editBtn{
+                width: 20%;
+            }
+        }
+    }
+}
