@@ -25,7 +25,6 @@ header{
     .nav-main{
         position: sticky;
         top: 0;
-        // width: 100%;
         ul{     
             display: grid;
             grid-template-columns: 30% 70%;
@@ -48,6 +47,7 @@ header{
                         display: inline;
                     }
                 }
+                //søgefelt
                 #search{
                     margin-top: 4.5%;
                     display: flex;
@@ -74,10 +74,12 @@ main{
         padding-top: 5%;
         padding-bottom: 5%;
     }
+    //Liste over sange
     .songList{
         margin: auto;
         width: 100%;
         border-collapse: collapse;
+        //liste over skrifter
         .trHead{
             th{
                 text-align: start;
@@ -85,19 +87,21 @@ main{
                 padding-bottom: 1%;
             }
         }
+        //liste data
         .trData{
             td{
                 font-size: 1.3vw;
                 .del, .edit{
                     cursor: pointer
-                }
-                
+                }  
             }
         }
+        //farve på hver anden data udtræk
         tr:nth-child(even) {
             background-color: #dddddd;
         }
     }
+    //opdater en sang
     .editWrapper{
         form{
             display: grid;
@@ -105,9 +109,19 @@ main{
             .editContent{
                 height: 20vh;
             }
+            //opdater btn
             .editBtn{
                 width: 20%;
             }
+            //fortryd btn
+            .regretBtn{
+                width: 20%;
+            }
         }
+    }
+    //Opret ny sang
+    #createForm{
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }

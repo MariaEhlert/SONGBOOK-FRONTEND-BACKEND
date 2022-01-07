@@ -131,4 +131,15 @@ main .editWrapper form .editContent {
 main .editWrapper form .editBtn {
   width: 20%;
 }
+
+main .editWrapper form .regretBtn {
+  width: 20%;
+}
+
+main #createForm {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
 /*# sourceMappingURL=main.css.map */
