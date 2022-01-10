@@ -48,12 +48,12 @@ header{
                     }
                 }
                 //søgefelt
-                #search{
+                .search{
                     margin-top: 4.5%;
                     display: flex;
                     justify-content: flex-end;
                     height: 60%;
-                    input[type=text] {
+                    input[type=search] {
                         width: 60%;
                         padding: 6px;
                         border: none;
@@ -85,6 +85,9 @@ main{
                 text-align: start;
                 font-size: 1.5vw;
                 padding-bottom: 1%;
+            }
+            .orderBy{
+                margin-left: 1%;
             }
         }
         //liste data

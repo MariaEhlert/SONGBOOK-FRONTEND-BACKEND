@@ -1,7 +1,8 @@
 import { myFetch } from "./helpers.js";
 
 const songList = document.querySelector('.songList');
-const main = document.querySelector('main')
+const main = document.querySelector('main');
+// const search = document.querySelector('.search')
 
 //overskriften ligger uden for getSongList for at man kan lave om på overskriften 
 //når men kommer ind på editSong
@@ -10,8 +11,13 @@ headLine.classList.add('headLine');
 headLine.innerText = 'Liste over sange';
 main.prepend(headLine);
 
+//søg efter en sang
 const search = async () => {
+
+    const input = document.querySelector('.searchInput');
+    const searchBtn = document.querySelector('.searchBtn');
     const data = await myFetch('http://localhost:4000/api/song/search');
+
 
 }
 search();
@@ -37,17 +43,49 @@ const getSongList = async () => {
     th1.innerText = 'Title';
     tr.append(th1);
 
-    const th2 = document.createElement('th');
-    th2.innerText = 'Kunstner navn';
-    tr.append(th2);
+    const orderBy = document.createElement('a');
+    orderBy.classList.add('orderBy');
+    orderBy.setAttribute('href', '#');
+    orderBy.innerHTML = '<i class="fas fa-sort-down"></i>';
+
+    // const SORT_ORDER = {
+    //     ASC: 'ASC',
+    //     DESC: 'DESC',
+    // };
+    // const SORT_ORDER_TOGGLE = {
+    //     [SORT_ORDER.ASC]: SORT_ORDER.DESC,
+    //     [SORT_ORDER.DESC]: SORT_ORDER.ASC,
+    // };
+    // orderBy.addEventListener('click', () => {
+    //         fetch('http://localhost:4000/api/songs',{
+    //         order: SORT_ORDER_TOGGLE,
+    //     });
+    // });
+
+
+    // orderBy.addEventListener('click', () => {
+    //     fetch('http://localhost:4000/api/songs',{
+    //         method: 'GET', 
+    //         where: 'orderby',
+    //         headers: {
+    //             "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+    //         },
+    //     })
+    // });
+
+    th1.append(orderBy);
 
     const th3 = document.createElement('th');
-    th3.innerText = 'Opdater';
+    th3.innerText = 'Kunstner navn';
     tr.append(th3);
 
     const th4 = document.createElement('th');
-    th4.innerText = 'Slet';
+    th4.innerText = 'Opdater';
     tr.append(th4);
+
+    const th5 = document.createElement('th');
+    th5.innerText = 'Slet';
+    tr.append(th5);
 
     songList.append(tr);
 

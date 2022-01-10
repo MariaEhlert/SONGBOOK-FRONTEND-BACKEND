@@ -64,7 +64,7 @@ header .nav-main ul #menu #menuItem a {
   display: inline;
 }
 
-header .nav-main ul #menu #search {
+header .nav-main ul #menu .search {
   margin-top: 4.5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,14 +75,14 @@ header .nav-main ul #menu #search {
   height: 60%;
 }
 
-header .nav-main ul #menu #search input[type=text] {
+header .nav-main ul #menu .search input[type=search] {
   width: 60%;
   padding: 6px;
   border: none;
   font-size: 1vw;
 }
 
-header .nav-main ul #menu #search button[type=submit] {
+header .nav-main ul #menu .search button[type=submit] {
   width: 16%;
 }
 
@@ -103,6 +103,10 @@ main .songList .trHead th {
   text-align: start;
   font-size: 1.5vw;
   padding-bottom: 1%;
+}
+
+main .songList .trHead .orderBy {
+  margin-left: 1%;
 }
 
 main .songList .trData td {

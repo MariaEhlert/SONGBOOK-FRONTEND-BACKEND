@@ -8,7 +8,7 @@ switch(siteUrl) {
 		break
 }
 
-document.querySelector('#search').addEventListener('click', () => {
-	console.log('Search is clicked');
-	getSongList(true)
-})
+// document.querySelector('#search').addEventListener('click', () => {
+// 	console.log('Search is clicked');
+// 	getSongList(true)
+// })
